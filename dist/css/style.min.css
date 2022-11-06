@@ -1,0 +1,278 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif:regular,700,&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Train+One:regular&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:regular&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/*Изменяем подсчет ширины блока*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*Убераем линии и обводки*/
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+/*Обьявляем теги блочными*/
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+/*Выравнивание шрифтов, размеров в разных браузерах.
+Запрет самовольного увеличения! */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*Назначение шрифта по умолчанию для тегов*/
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+/*Убераем особенности поведения разных тегов в разных браузерах*/
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.header__container {
+  max-width: 100%;
+  padding: 60px 2px 5px 2px;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 60px 2px 5px 2px;
+}
+
+.header__top-icons {
+  display: flex;
+  column-gap: 40px;
+  justify-content: space-between;
+}
+
+.header__icon img {
+  min-width: 100%;
+}
+
+.title-header {
+  font-size: 4.285rem;
+  font-family: "Train One";
+  line-height: 1.45;
+  color: #000000;
+}
+
+.header__top-button {
+  text-align: center;
+}
+
+.button {
+  font-size: 1.285rem;
+  line-height: 1.333;
+  background-color: rgb(41, 136, 202);
+  color: rgb(255, 255, 255);
+  padding: 9px 10px;
+}
+
+.button:hover {
+  background-color: rgb(12, 82, 136);
+  transition: all 0.3s ease 0s;
+}
+
+.header__menu {
+  margin: 0 auto;
+  padding: 30px 20px 20px 20px;
+}
+
+.menu__items {
+  display: flex;
+  justify-content: center;
+  column-gap: 70px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.item {
+  font-size: 1.7rem;
+  line-height: 1.375;
+  color: #000000;
+  padding: 3px 8px;
+}
+
+.item:hover {
+  text-decoration: underline;
+  transition: all 0.5s ease-out 0.2s;
+}
+
+[class*=_icon-]::before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]::before {
+  display: block;
+}
+
+._icon-facebook:before {
+  content: "\e900";
+}
+
+._icon-instagram:before {
+  content: "\e901";
+}
+
+._icon-quote:before {
+  content: "\e902";
+}
+
+._icon-s-bars:before {
+  content: "\e903";
+}
+
+._icon-select-arrow:before {
+  content: "\e904";
+}
+
+._icon-s-insta:before {
+  content: "\e905";
+}
+
+._icon-s-linkedin-alt:before {
+  content: "\e906";
+}
+
+._icon-s-phone:before {
+  content: "\e907";
+}
+
+._icon-s-slider-arrow-4:before {
+  content: "\e908";
+}
+
+._icon-s-weather:before {
+  content: "\e909";
+}
+
+._icon-twitter:before {
+  content: "\e911";
+}
+
+html,
+body {
+  font-family: "Noto Sans";
+  color: #000000;
+}
+@media (max-width: 767.98px) {
+  html,
+  body {
+    font-size: calc(11px + 5.1 * ((100vw -320px) / 2350));
+  }
+}
+@media (min-width: 767.98px) {
+  html,
+  body {
+    font-size: calc(11px + 3 * (100vw / 2350));
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  min-width: 1920px;
+  margin: 0 auto;
+}
+
+[class*=__container] {
+  padding: 0px 15px;
+  max-width: 1570px;
+  margin: 0 auto;
+}
+
+header {
+  flex: 0 1 auto;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  background-color: rgb(241, 203, 15);
+}
+
+footer {
+  flex: 0 0 auto;
+  background-color: green;
+}
