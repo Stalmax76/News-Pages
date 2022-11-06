@@ -1,0 +1,136 @@
+@use "sass: math";
+
+//підключення міксинів
+@import "base/mixins";
+
+// обнулення
+@import "_nullStyle";
+
+//  підключення додаткових модулів
+@import "fonts";
+@import "_header";
+@import "_main";
+@import "_common.scss";
+
+// підключення шрифтів для використфння
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif:regular,700,&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Train+One:regular&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:regular&display=swap");
+
+// =======================================================================================
+// підключення локальних шрифтів
+// @import "fonts/fonts";
+
+// підключення шконочного шрифту
+// @import "fonts/icons"
+
+// шрифт основний, записаний у змінну
+$mainFontFamily: "Noto Sans";
+$titleFontFamily: "Noto Serif";
+$mainFontSize: rem(1); //розмір шрифта за замoвчуванням
+
+//  основні кольори для використання
+$blackColor: #000000;
+$grayColor: #737373;
+$whiteColor: #ffffff;
+$blueColor: #2988ca;
+// ======================================================= mixin with parametrs =================
+// мінімільний розмір сторінки
+$minWidth: 320;
+
+// ширина полотна
+$maxWidth: 1920;
+
+// ширина обмежуючого контейнера
+$maxWidthContainer: 1540;
+
+// загальний відступ у контейнера
+// (30 = по 15px зліва та зправа, 0 = немає відступа)
+$containerPadding: 30;
+
+// ширина спрацювання першого брейкпщінта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// брейк-поінти
+$pc: em($containerWidth); //ПК, ноутбук, деякі планшети в горизонтальному положенні
+$tablet: em(991.98); //Планшети, деякі телефони в горизонтальному положенні
+$mobile: em(767.98); //телефони L
+$mobileSmall: em(479.98); //телефони S
+
+// тип адаптива:
+//  1 = відзивчива (у контейнера немає брейкпоінтів),
+//  2 = по брейк-поінтам (контейнер міняє свою ширину по брейк-поінтам)
+$responsiveType: 2;
+
+// ================================ mixin ======================================
+
+@mixin adaptive-font($pc, $mobileSmall) {
+   $addSize: $pc - $mobileSmall;
+   $addMobileSize: $addSize + $addSize * 0.7;
+
+   @media (max-width: 767.98px) {
+      font-size: calc(#{$mobileSmall + px} + #{$addMobileSize} * ((100vw -320px) / #{$maxWidth}));
+   }
+
+   @media (min-width: 767.98px) {
+      font-size: calc(#{$mobileSmall + px} + #{$addSize} * (100vw / #{$maxWidth}));
+   }
+}
+
+// ==============================================================================================
+
+// стилі тега BODY =========================================================
+
+html,
+body {
+   font-family: $mainFontFamily;
+   color: $blackColor;
+   @include adaptive-font(14, 11);
+
+   //   // скролл заблокований
+   //   .lock & {
+   //     overflow: hidden;
+   //     touch-action: none;
+   //     overscroll-behavior: none;
+   //   }
+   //   // сайт загружений
+   //   .loaded & {
+
+   //   }
+}
+
+// оболочка wrapper
+.wrapper {
+   background-color: rgb(238, 172, 172);
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   width: 100%;
+   min-width: 1920px;
+   margin: 0 auto;
+}
+
+//========================== настройки для контейнера ===============
+[class*="__container"] {
+   padding: 0px 15px;
+   max-width: 1570px;
+   margin: 0 auto;
+}
+
+// ======================================== blocks ===============================================
+.header {
+   flex: 0 1 auto;
+   overflow: hidden;
+   //background-color: rgb(171, 127, 237);
+}
+.main {
+   flex: 1 1 auto; // прижимаєм footer
+   box-sizing: border-box;
+   background-color: rgb(241, 203, 15);
+}
+
+.footer {
+   flex: 0 0 auto;
+   background-color: green;
+}
