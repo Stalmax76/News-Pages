@@ -7,10 +7,10 @@
 @import "_nullStyle";
 
 //  підключення додаткових модулів
-//@import "fonts";
+//@import "fonts/icons.scss";
 @import "_header";
 //@import "_main";
-//@import "_common.scss";
+@import "_common.scss";
 
 // підключення шрифтів для використання &display=swap - при підключенні через плагін
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif:regular,700,&display=swap");
@@ -19,7 +19,7 @@
 
 // =======================================================================================
 // підключення локальних шрифтів
-//@import "fonts/icons.scss";
+//@import "fonts/fonts";
 
 // підключення іконочного шрифту
 @import "fonts/icons.scss";

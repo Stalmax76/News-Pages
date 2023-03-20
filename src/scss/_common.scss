@@ -1,0 +1,78 @@
+// підключення шрифтів для використфння
+// @import url("https://fonts.googleapis.com/css?family=Noto+Serif:regular,700,&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Train+One:regular&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Noto+Sans:regular&display=swap");
+
+$titleFontFamily: "Noto Serif";
+
+// переводимо:       font-size  - пікселі в реми     (формула переводу rem = (шрифт)px / базовий розмір шрифту(px))
+//                                                     (16 у браузерах у нас 14)
+// line-height: =  (line-height з шаблону ділим на розмір шрифту )
+// leter-spacing: = (привязуєм до шрифту - використовуємо  em(7.5, 12);
+
+//============================================= card with foto =============================
+.item-card-with-foto {
+   display: flex;
+   border-bottom: 1px solid rgba(224, 224, 224, 1);
+   padding-top: 3px;
+   padding-bottom: 18px;
+   column-gap: 20px;
+   justify-content: left;
+}
+
+.item-card-with-foto__image {
+}
+.item-news-card-with-photo__image img {
+   min-width: 100%;
+}
+.item-card-with-foto__content {
+   text-align: left;
+   display: flex;
+   flex-direction: column;
+}
+.item-card-with-foto__title {
+}
+.title__card-with-foto {
+}
+.title-card {
+   font-family: $titleFontFamily;
+   font-size: 1.285rem;
+   line-height: 1.38;
+}
+.item-card-with-foto__text {
+   flex: 1 1 auto;
+   padding: 5px 2px 8px 2px;
+}
+.text-card {
+   line-height: 1.35;
+}
+.item-card__date {
+}
+.date-item-card {
+   color: rgba(115, 115, 115, 1);
+   font-size: 0.857rem;
+   line-height: 1.33;
+}
+// ============================================================================================================
+
+// ========================== item-news-card ===========================================================
+.item-news-card {
+   padding-bottom: 16px;
+   margin-bottom: 16px;
+}
+.item-news-card__date {
+   padding-bottom: 4px;
+}
+
+.item-news-card__text {
+   text-align: left;
+}
+.text-item-news-card {
+   border-bottom: 1px solid rgba(224, 224, 224, 1);
+   padding-bottom: 16px;
+}
+.noto-serife__text {
+   font-family: "Noto Serif";
+   font-size: 1.285rem;
+   line-height: 1.38;
+}
