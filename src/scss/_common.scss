@@ -76,3 +76,24 @@ $titleFontFamily: "Noto Serif";
    font-size: 1.285rem;
    line-height: 1.38;
 }
+
+// ================================= button ================================
+.button {
+   padding: 9px 40px;
+   background-color: $primaryColor_default;
+   min-width: 236px;
+   cursor: pointer;
+   &:hover {
+      background-color: $primaryColor_acsent-2;
+   }
+   a {
+      font-size: 16px;
+      line-height: 1.5; /* 24/16 */
+      text-align: center;
+      color: $whiteColor;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}

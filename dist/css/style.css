@@ -97,77 +97,131 @@ h6 {
   font-weight: 400;
 }
 
-.header__container {
-  max-width: 100%;
-  padding: 60px 2px 5px 2px;
+.wrapper-header {
+  padding: 49px 0px 32px;
 }
 
-.header__top {
+.wrapper-header__head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 60px 2px 5px 2px;
 }
 
-.header__top-icons {
+.head-header {
+  margin-bottom: 30px;
+}
+
+.head-header__info {
   display: flex;
-  column-gap: 40px;
-  justify-content: space-between;
-}
-
-.header__icon img {
-  min-width: 100%;
-}
-
-.title-header {
-  font-size: 4.285rem;
-  font-family: "Train One";
-  line-height: 1.45;
-  color: #000000;
-}
-
-.header__top-button {
-  text-align: center;
-}
-
-.button {
-  font-size: 1.285rem;
-  line-height: 1.333;
-  background-color: rgb(41, 136, 202);
-  color: rgb(255, 255, 255);
-  padding: 9px 10px;
-}
-
-.button:hover {
-  background-color: rgb(12, 82, 136);
-  transition: all 0.3s ease 0s;
-}
-
-.header__menu {
-  margin: 0 auto;
-  padding: 30px 0px 20px;
-}
-
-.menu__items {
-  display: flex;
+  height: 24px;
   justify-content: center;
-  column-gap: 70px;
-  flex-wrap: wrap;
-  text-align: center;
+  flex: 0 1 auto;
+  align-items: flex-end;
+  gap: 30px;
+}
+.head-header__info:img {
+  width: 100%;
+}
+.head-header__info a {
+  cursor: pointer;
 }
 
-.item {
-  font-size: 1.7rem;
-  line-height: 1.375;
+.info-header__search {
+  padding-right: 30px;
+}
+
+.head-header__title {
+  font-family: "Train One";
+  font-size: 60px;
+  line-height: 1.45; /* 87/60 */
+  padding: 0 15px;
+}
+.head-header__title a {
+  cursor: pointer;
+}
+
+.wrapper-header__menu {
+  margin: 0 55px;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__item a {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.37; /* 33/24 */
   color: #000000;
-  padding: 3px 8px;
 }
-
-.item:hover {
+.menu__item a:hover {
   text-decoration: underline;
-  transition: all 0.5s ease-out 0.2s;
 }
 
+@media (max-width: 1197.98px) {
+  .wrapper-header {
+    padding: 15px 0px 20px;
+  }
+}
+@media (max-width: 991.98px) {
+  .wrapper-header__head {
+    display: grid;
+    grid-template-columns: 1 1fr;
+    grid-auto-columns: auto;
+    justify-content: stretch;
+    align-items: center;
+    gap: 10px;
+  }
+  .head-header__title {
+    justify-self: center;
+  }
+  .head-header__info {
+    grid-row-start: 2;
+    justify-self: end;
+  }
+  .head-header__subscribe-button {
+    justify-self: end;
+  }
+  .wrapper-header__menu {
+    margin: 0 35px;
+  }
+  .head-header {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .wrapper-header__head {
+    gap: 25px;
+  }
+  .head-header__title {
+    font-size: 45px;
+  }
+  .head-header__info {
+    justify-content: center;
+    align-items: center;
+    justify-self: normal;
+  }
+  .head-header__subscribe-button {
+    justify-self: stretch;
+    text-align: center;
+  }
+  .info-header__search {
+    padding-right: 0px;
+  }
+  .wrapper-header__menu {
+    display: none;
+  }
+}
+@media (max-width: 543.98px) {
+  .head-header__info {
+    justify-content: space-around;
+  }
+  .head-header__title {
+    font-size: 35px;
+  }
+}
 .item-card-with-foto {
   display: flex;
   border-bottom: 1px solid rgb(224, 224, 224);
@@ -232,6 +286,26 @@ h6 {
   line-height: 1.38;
 }
 
+.button {
+  padding: 9px 40px;
+  background-color: #2988ca;
+  min-width: 236px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #47adf4;
+}
+.button a {
+  font-size: 16px;
+  line-height: 1.5; /* 24/16 */
+  text-align: center;
+  color: #ffffff;
+  transition: all 0.3s ease 0s;
+}
+.button a:hover {
+  text-decoration: underline;
+}
+
 [class*=_icon-]::before {
   font-family: "icons";
   font-style: normal;
@@ -294,18 +368,19 @@ h6 {
 html,
 body {
   font-family: "Noto Sans";
-  color: #000000;
+  background-color: #ffffff;
+  font-weight: 400;
 }
 @media (max-width: 767.98px) {
   html,
   body {
-    font-size: calc(11px + 5.1 * ((100vw -320px) / 2350));
+    font-size: calc(11px + 5.1 * ((100vw -320px) / 1920));
   }
 }
 @media (min-width: 767.98px) {
   html,
   body {
-    font-size: calc(11px + 3 * (100vw / 2350));
+    font-size: calc(11px + 3 * (100vw / 1920));
   }
 }
 
@@ -315,7 +390,6 @@ body {
   flex-direction: column;
   overflow: hidden;
   width: 100%;
-  min-width: 1920px;
   margin: 0 auto;
 }
 
@@ -333,10 +407,10 @@ header {
 .main {
   flex: 1 1 auto;
   box-sizing: border-box;
-  background-color: rgb(241, 203, 15);
+  background-color: #dddddd;
 }
 
 footer {
   flex: 0 0 auto;
-  background-color: green;
+  background-color: #92979d;
 }
