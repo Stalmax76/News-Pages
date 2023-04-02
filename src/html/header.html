@@ -4,7 +4,7 @@
       <div class="wrapper-header__head head-header">
         <div class="head-header__info info-header">
           <div class="info-header__burger">
-            <a><img src="../img/header/burger.png" alt="image" /></a>
+            <span></span>
           </div>
           <div class="info-header__search">
             <a><img src="../img/header/search.svg" alt="image" /></a>
@@ -20,19 +20,51 @@
           <a href="#">Оформити підписку</a>
         </div>
       </div>
-      <div class="wrapper-header__menu menu">
+      <nav class="wrapper-header__menu menu">
         <ul class="menu__list">
-          <li class="menu__item"><a href="#">Місто</a></li>
-          <li class="menu__item"><a href="#">Економіка</a></li>
-          <li class="menu__item"><a href="#">Персоналії</a></li>
-          <li class="menu__item"><a href="#">Влада</a></li>
-          <li class="menu__item"><a href="#">Події</a></li>
-          <li class="menu__item"><a href="#">Культура</a></li>
-          <li class="menu__item"><a href="#">Спорт</a></li>
-          <li class="menu__item"><a href="#">Політика</a></li>
-          <li class="menu__item"><a href="#">Інше</a></li>
+          <li class="menu__item">
+            <a data-goto=".city-page" class="menu__link" href="#">Місто</a>
+            <span class="menu__arrow"></span>
+            <ul class="menu__sub-list">
+              <li><a href="" class="menu__sub-link">Розділ-1</a></li>
+              <li><a href="" class="menu__sub-link">Розділ-2</a></li>
+              <li><a href="" class="menu__sub-link">Розділ-3</a></li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a data-goto=".economics-page" class="menu__link" href="#"
+              >Економіка</a
+            >
+          </li>
+          <li class="menu__item">
+            <a data-goto=".persons-page" class="menu__link" href="#"
+              >Персоналії</a
+            >
+          </li>
+          <li class="menu__item">
+            <a data-goto=".goverment-page" class="menu__link" href="#">Влада</a>
+          </li>
+          <li class="menu__item">
+            <a data-goto=".events-page" class="menu__link" href="#">Події</a>
+          </li>
+          <li class="menu__item">
+            <a data-goto=".cultures-page" class="menu__link" href="#"
+              >Культура</a
+            >
+          </li>
+          <li class="menu__item">
+            <a data-goto=".sports-page" class="menu__link" href="#">Спорт</a>
+          </li>
+          <li class="menu__item">
+            <a data-goto=".politics-page" class="menu__link" href="#"
+              >Політика</a
+            >
+          </li>
+          <li class="menu__item">
+            <a data-goto=".other-page" class="menu__link" href="#">Інше</a>
+          </li>
         </ul>
-      </div>
+      </nav>
     </div>
   </div>
 </header>

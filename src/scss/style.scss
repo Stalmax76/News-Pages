@@ -7,11 +7,12 @@
 
 // обнулення
 @import "_nullStyle";
+@import "_normalize";
 
 //  підключення додаткових модулів
 //@import "fonts/icons.scss";
 @import "_header";
-//@import "_main";
+@import "_main";
 @import "_common.scss";
 
 // підключення шрифтів для використання &display=swap - при підключенні через плагін
@@ -37,16 +38,16 @@ body {
    font-weight: 400;
    @include adaptive-font(14, 11);
 
-   //   // скролл заблокований
-   //   .lock & {
-   //     overflow: hidden;
-   //     touch-action: none;
-   //     overscroll-behavior: none;
-   //   }
-   //   // сайт загружений
-   //   .loaded & {
+   // скролл заблокований
+   ._lock {
+      overflow: hidden;
+      // touch-action: none;
+      //overscroll-behavior: none;
+   }
+   // сайт загружений
+   // .loaded & {
 
-   //   }
+   // }
 }
 
 // оболочка wrapper
@@ -70,7 +71,13 @@ body {
 // ======================================== blocks ===============================================
 header {
    flex: 0 1 auto;
-   overflow: hidden;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 10;
+   background-color: $whiteColor;
+   min-height: 230px;
 }
 .main {
    flex: 1 1 auto; // прижимаєм footer

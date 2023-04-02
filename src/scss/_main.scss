@@ -1,0 +1,91 @@
+.pages {
+   padding: 90px 0px 30px 0px;
+}
+.page {
+   padding: 30px;
+   max-width: 1200px;
+   margin: 10px auto;
+}
+.city-page {
+   background-color: $backgroundGray;
+}
+.economics-page {
+   background-color: $darkGray;
+}
+.persons-page {
+   background-color: $lightGray;
+}
+.goverment-page {
+   background-color: $lightGray;
+}
+.events-page {
+   background-color: $backgroundGray;
+}
+.cultures-page {
+   background-color: $lightGray;
+}
+.sports-page {
+   background-color: $darkGray;
+}
+.politics-page {
+   background-color: $lightGray;
+}
+.other-page {
+   background-color: $backgroundGray;
+}
+
+.title {
+   font-size: 24px;
+   font-weight: 600;
+   margin-bottom: 10px;
+}
+
+.text {
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 1.5;
+}
+.city-page__title {
+}
+.city-page__text {
+}
+
+.economics-page__title {
+}
+.economics-page__text {
+}
+
+.persons-page-page__title {
+}
+.persons-page-page__text {
+}
+
+.goverment-page__title {
+}
+.goverment-page__text {
+}
+
+.events-page__title {
+}
+.events-page__text {
+}
+
+.cultures-page__title {
+}
+.cultures-page__text {
+}
+
+.sports-page__title {
+}
+.sports-page__text {
+}
+
+.politics-page__title {
+}
+.politics-page__text {
+}
+
+.other-page__title {
+}
+.other-page__text {
+}
