@@ -104,3 +104,48 @@ if (menuLinks.length > 0) {
     }
   }
 }
+
+//================  weather ==================
+
+const weatherBlock = document.querySelector("#weather");
+async function loadWeather(e) {
+  weatherBlock.innerHTML = `<div class="weather__loading" >
+  <img src="../img/header/giphy.gif" alt="loading...">
+  </div>`;
+
+  const server =
+    "https://api.openweathermap.org/data/2.5/weather?units=metric&q=Warszawa&appid=3fa1b2022990b86e709116d551f9ac84";
+  const response = await fetch(server, {
+    method: "GET",
+  });
+  const responseResult = await response.json();
+
+  if (response.ok) {
+    getWeather(responseResult);
+  } else {
+    weatherBlock.innerHTML = responseResult.message;
+  }
+}
+
+function getWeather(data) {
+  console.log(data);
+  const location = data.name;
+  const temp = Math.round(data.main.temp);
+  const weatherStatus = data.weather[0].main;
+  const weatherIcon = data.weather[0].icon;
+
+  //html - template;
+  const template = `
+  <div class="weather__body">
+      <div class="weather__icon">
+        <img src="http://openweathermap.org/img/w/${weatherIcon}.png" alt="${weatherStatus}" />
+      </div>
+      <div class="weather__temp"> ${temp}<span>&#176;</span>C </div>
+  </div>
+  `;
+  weatherBlock.innerHTML = template;
+}
+
+if (weatherBlock) {
+  loadWeather();
+}

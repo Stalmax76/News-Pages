@@ -433,6 +433,8 @@ template {
 }
 .head-header__title h1 {
   font-size: 1em;
+  text-transform: uppercase;
+  text-shadow: 2px 5px 5px rgba(124, 137, 232, 0.6705882353);
 }
 .head-header__subscribe-button {
   border-radius: 5px;
@@ -444,7 +446,7 @@ template {
   justify-content: center;
   flex: 0 1 auto;
   align-items: flex-end;
-  gap: 30px;
+  gap: 20px;
 }
 .head-header .info-header img {
   width: 100%;
@@ -461,10 +463,46 @@ template {
   display: none;
 }
 .info-header__search {
-  padding-right: 30px;
+  padding-right: 20px;
 }
-.info-header__weather {
-  padding: 1px;
+
+.weather {
+  width: 100px;
+  height: 35px;
+  padding: 2px 4px;
+}
+
+.weather__body {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.weather__icon {
+  display: block;
+  min-width: 37px;
+}
+
+.weather__icon img {
+  width: 100%;
+}
+
+.weather__temp {
+  font-weight: 600;
+}
+
+.weather__temp span {
+  content: "°";
+}
+
+.weather__loading {
+  width: 100px;
+}
+
+.weather__loading img {
+  max-width: 50%;
+  border-radius: 25%;
 }
 
 .menu__list {
@@ -738,7 +776,13 @@ body._touch .menu__list > li._active .menu__arrow {
     font-size: 35px;
   }
 }
+@media (max-width: 370.98px) {
+  .head-header__title {
+    font-size: 29px;
+  }
+}
 .pages {
+  margin-top: 230px;
   padding: 90px 0px 30px 0px;
 }
 

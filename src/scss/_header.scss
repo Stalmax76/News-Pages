@@ -33,6 +33,8 @@
       }
       h1 {
          font-size: 1em;
+         text-transform: uppercase;
+         text-shadow: 2px 5px 5px #7c89e8ab;
       }
    }
    &__subscribe-button {
@@ -45,7 +47,7 @@
       justify-content: center;
       flex: 0 1 auto;
       align-items: flex-end;
-      gap: 30px;
+      gap: 20px;
       img {
          width: 100%;
       }
@@ -63,11 +65,42 @@
    }
 
    &__search {
-      padding-right: 30px;
+      padding-right: 20px;
    }
-   &__weather {
-      padding: 1px;
-   }
+}
+//===============  weather =======================
+.info-header__weather {
+}
+.weather {
+   width: 100px;
+   height: 35px;
+   padding: 2px 4px;
+}
+.weather__body {
+   display: flex;
+   gap: 10px;
+   justify-content: space-around;
+   align-items: center;
+}
+.weather__icon {
+   display: block;
+   min-width: 37px;
+}
+.weather__icon img {
+   width: 100%;
+}
+.weather__temp {
+   font-weight: 600;
+}
+.weather__temp span {
+   content: "\00B0";
+}
+.weather__loading {
+   width: 100px;
+}
+.weather__loading img {
+   max-width: 50%;
+   border-radius: 25%;
 }
 
 //====================================================
@@ -361,5 +394,10 @@ body._touch .menu__list > li._active .menu__arrow {
    }
    .head-header__title {
       font-size: 35px;
+   }
+}
+@media (max-width: 370.98px) {
+   .head-header__title {
+      font-size: 29px;
    }
 }

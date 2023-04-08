@@ -8,54 +8,8 @@
   <title>Головна</title>
   <link
     rel="apple-touch-icon"
-    sizes="57x57"
-    href="../src/img/favicon_io/apple-icon-57x57.png"
-  />
-  <link
-    rel="apple-touch-icon"
-    sizes="60x60"
-    href="../img/favicon_io/apple-icon-60x60.png"
-  />
-  <link
-    rel="apple-touch-icon"
-    sizes="72x72"
-    href="../img/favicon_io/apple-icon-72x72.png"
-  />
-  <link
-    rel="apple-touch-icon"
-    sizes="76x76"
-    href="../img/favicon_io/apple-icon-76x76.png"
-  />
-  <link
-    rel="apple-touch-icon"
-    sizes="114x114"
-    href="../img/favicon_io/apple-icon-114x114.png"
-  />
-  <link
-    rel="apple-touch-icon"
-    sizes="120x120"
-    href="../img/favicon_io/apple-icon-120x120.png"
-  />
-  <link
-    rel="apple-touch-icon"
-    sizes="144x144"
-    href="../img/favicon_io/apple-icon-144x144.png"
-  />
-  <link
-    rel="apple-touch-icon"
-    sizes="152x152"
-    href="../img/favicon_io/apple-icon-152x152.png"
-  />
-  <link
-    rel="apple-touch-icon"
     sizes="180x180"
-    href="../img/favicon_io/apple-icon-180x180.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="192x192"
-    href="../img/favicon_io/android-icon-192x192.png"
+    href="../img/favicon_io/apple-touch-icon.png"
   />
   <link
     rel="icon"
@@ -66,19 +20,9 @@
   <link
     rel="icon"
     type="image/png"
-    sizes="96x96"
-    href="../img/favicon_io/favicon-96x96.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
     sizes="16x16"
     href="../img/favicon_io/favicon-16x16.png"
   />
-  <link rel="manifest" href="../img/favicon_io/manifest.json" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#ffffff" />
 
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
@@ -97,12 +41,17 @@
           <div class="info-header__search">
             <a><img src="../img/header/search.svg" alt="image" /></a>
           </div>
-          <div class="info-header__weather">
-            <img src="../img/header/weather.png" alt="image" />
+          <div id="weather" class="info-header__weather weather">
+            <div class="weather__body">
+              <div class="weather__icon">
+                <img src="../img/header/cloud.svg" alt="icons" />
+              </div>
+              <div class="weather__temp">14 <span>&#176;</span>C</div>
+            </div>
           </div>
         </div>
         <div class="head-header__title">
-          <h1><a>VinnitsaTimes</a></h1>
+          <h1><a>Current news</a></h1>
         </div>
         <div class="head-header__subscribe-button button">
           <a href="#">Оформити підписку</a>
@@ -149,7 +98,7 @@
             >
           </li>
           <li class="menu__item">
-            <a data-goto=".other-page" class="menu__link" href="#">Інше</a>
+            <a data-goto=".    other-page" class="menu__link" href="#">Інше</a>
           </li>
         </ul>
       </nav>
