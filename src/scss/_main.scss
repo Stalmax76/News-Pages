@@ -1,14 +1,11 @@
+@import "pages/city_page.scss";
+
 .pages {
-   margin-top: 230px;
-   padding: 90px 0px 30px 0px;
+   padding: 285px 0px 30px 0px;
 }
-.page {
-   padding: 30px;
-   max-width: 1200px;
-   margin: 10px auto;
-}
+
 .city-page {
-   background-color: $backgroundGray;
+   //background-color: $backgroundGray;
 }
 .economics-page {
    background-color: $darkGray;

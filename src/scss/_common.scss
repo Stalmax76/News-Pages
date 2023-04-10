@@ -11,67 +11,104 @@ $titleFontFamily: "Noto Serif";
 // leter-spacing: = (привязуєм до шрифту - використовуємо  em(7.5, 12);
 
 //============================================= card with foto =============================
-.item-card-with-foto {
+.card-with-foto {
    display: flex;
    border-bottom: 1px solid rgba(224, 224, 224, 1);
    padding-top: 3px;
    padding-bottom: 18px;
    column-gap: 20px;
    justify-content: left;
+   margin-bottom: 20px;
+}
+.card-with-foto:last-child {
+   margin-bottom: 2px;
 }
 
-.item-card-with-foto__image {
+.card-with-foto__image {
 }
-.item-news-card-with-photo__image img {
+.card-with-photo__image img {
    min-width: 100%;
 }
-.item-card-with-foto__content {
+.card-with-foto__content {
    text-align: left;
    display: flex;
    flex-direction: column;
 }
-.item-card-with-foto__title {
+.content-card-with-foto__title {
 }
-.title__card-with-foto {
-}
-.title-card {
-   font-family: $titleFontFamily;
-   font-size: 1.285rem;
-   line-height: 1.38;
-}
-.item-card-with-foto__text {
+
+.content-card-with-foto__text {
    flex: 1 1 auto;
    padding: 5px 2px 8px 2px;
 }
-.text-card {
+
+.content-card-with-foto__date {
+}
+
+//================= card-with-big-foto =========================
+.card-with-big-foto {
+}
+.card-with-big-foto__image {
+}
+.card-with-big-foto__image img {
+   width: 100%;
+}
+.card-with-big-foto__content {
+   padding: 16px 0px;
+}
+.content-card-with-big-foto {
+   padding: 16px 0px;
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+}
+.content-card-with-big-foto__title {
+}
+
+.content-card-with-big-foto__text {
+   margin-top: 7px;
+   flex: 1 1 auto;
+}
+
+.card-with-big-foto__date {
+   margin-top: 7px;
+}
+
+// ============= commman block=============================================
+.card-title {
+   font-family: $fontCardTitle;
+   font-size: 1.28rem; /* 18/14 */
+   line-height: 1.38; /* 25/18 */
+}
+.card-text {
    line-height: 1.35;
 }
-.item-card__date {
-}
-.date-item-card {
+.card-date {
    color: rgba(115, 115, 115, 1);
    font-size: 0.857rem;
    line-height: 1.33;
 }
-// ============================================================================================================
-
 // ========================== item-news-card ===========================================================
-.item-news-card {
+.card-news {
    padding-bottom: 16px;
-   margin-bottom: 16px;
 }
-.item-news-card__date {
+.card-news:last-child {
+   .card-news__text {
+      border-bottom: none;
+      padding-bottom: 0px;
+   }
+}
+.card-news__date {
    padding-bottom: 4px;
 }
 
-.item-news-card__text {
+.card-news__text {
    text-align: left;
-}
-.text-item-news-card {
    border-bottom: 1px solid rgba(224, 224, 224, 1);
    padding-bottom: 16px;
 }
-.noto-serife__text {
+
+.card-text-noto-serife {
    font-family: "Noto Serif";
    font-size: 1.285rem;
    line-height: 1.38;

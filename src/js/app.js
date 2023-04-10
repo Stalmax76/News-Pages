@@ -136,12 +136,12 @@ function getWeather(data) {
 
   //html - template;
   const template = `
-  <div class="weather__body">
-      <div class="weather__icon">
-        <img src="http://openweathermap.org/img/w/${weatherIcon}.png" alt="${weatherStatus}" />
-      </div>
-      <div class="weather__temp"> ${temp}<span>&#176;</span>C </div>
-  </div>
+    <div class="weather__body">
+        <div class="weather__icon">
+          <img src="http://openweathermap.org/img/w/${weatherIcon}.png" alt="${weatherStatus}" />
+        </div>
+        <div class="weather__temp"> ${temp}<span>&#176;</span>C </div>
+    </div>
   `;
   weatherBlock.innerHTML = template;
 }

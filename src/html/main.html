@@ -1,101 +1,93 @@
 <main class="pages">
-  <section class="page city-page">
-    <h2 class="city-page__title title">Місто</h2>
-    <div class="city-page__text text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-      quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
-      quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
-      quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
-      quia blanditiis facere eos delectus atque numquam, quis similique quae
-      iste! At?
-    </div>
-  </section>
-  <section class="page economics-page">
-    <h2 class="economics-page__title title">Економіка</h2>
-    <div class="economics-page__text text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-      quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
-      quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
-      quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
-      quia blanditiis facere eos delectus atque numquam, quis similique quae
-      iste! At?
-    </div>
-  </section>
-  <section class="page persons-page">
-    <h2 class="persons-page-page__title title">Персоналії</h2>
-    <div class="persons-page-page__text text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-      quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
-      quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
-      quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
-      quia blanditiis facere eos delectus atque numquam, quis similique quae
-      iste! At?
-    </div>
-  </section>
-  <section class="page goverment-page">
-    <h2 class="goverment-page__title title">Влада</h2>
-    <div class="goverment-page__text text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-      quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
-      quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
-      quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
-      quia blanditiis facere eos delectus atque numquam, quis similique quae
-      iste! At?
-    </div>
-  </section>
-  <section class="page events-page">
-    <h2 class="events-page__title title">Події</h2>
-    <div class="events-page__text text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-      quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
-      quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
-      quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
-      quia blanditiis facere eos delectus atque numquam, quis similique quae
-      iste! At?
-    </div>
-  </section>
-  <section class="page cultures-page">
-    <h2 class="cultures-page__title title">Культура</h2>
-    <div class="cultures-page__text text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-      quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
-      quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
-      quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
-      quia blanditiis facere eos delectus atque numquam, quis similique quae
-      iste! At?
-    </div>
-  </section>
-  <section class="page sports-page">
-    <h2 class="sports-page__title title">Спорт</h2>
-    <div class="sports-page__text text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-      quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
-      quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
-      quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
-      quia blanditiis facere eos delectus atque numquam, quis similique quae
-      iste! At?
-    </div>
-  </section>
-  <section class="page politics-page">
-    <h2 class="politics-page__title title">Політика</h2>
-    <div class="politics-page__text text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-      quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
-      quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
-      quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
-      quia blanditiis facere eos delectus atque numquam, quis similique quae
-      iste! At?
-    </div>
-  </section>
-  <section class="page other-page">
-    <h2 class="other-page__title title">Інше</h2>
-    <div class="other-page__text text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-      quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
-      quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
-      quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
-      quia blanditiis facere eos delectus atque numquam, quis similique quae
-      iste! At?
-    </div>
-  </section>
+  <div class="pages__container">
+    @@include('pages/city-page.html',{})
+    <!-- <section class="page economics-page">
+      <h2 class="economics-page__title title">Економіка</h2>
+      <div class="economics-page__text text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
+        quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
+        quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
+        quia blanditiis facere eos delectus atque numquam, quis similique quae
+        iste! At?
+      </div>
+    </section>
+    <section class="page persons-page">
+      <h2 class="persons-page-page__title title">Персоналії</h2>
+      <div class="persons-page-page__text text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
+        quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
+        quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
+        quia blanditiis facere eos delectus atque numquam, quis similique quae
+        iste! At?
+      </div>
+    </section>
+    <section class="page goverment-page">
+      <h2 class="goverment-page__title title">Влада</h2>
+      <div class="goverment-page__text text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
+        quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
+        quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
+        quia blanditiis facere eos delectus atque numquam, quis similique quae
+        iste! At?
+      </div>
+    </section>
+    <section class="page events-page">
+      <h2 class="events-page__title title">Події</h2>
+      <div class="events-page__text text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
+        quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
+        quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
+        quia blanditiis facere eos delectus atque numquam, quis similique quae
+        iste! At?
+      </div>
+    </section>
+    <section class="page cultures-page">
+      <h2 class="cultures-page__title title">Культура</h2>
+      <div class="cultures-page__text text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
+        quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
+        quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
+        quia blanditiis facere eos delectus atque numquam, quis similique quae
+        iste! At?
+      </div>
+    </section>
+    <section class="page sports-page">
+      <h2 class="sports-page__title title">Спорт</h2>
+      <div class="sports-page__text text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
+        quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
+        quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
+        quia blanditiis facere eos delectus atque numquam, quis similique quae
+        iste! At?
+      </div>
+    </section>
+    <section class="page politics-page">
+      <h2 class="politics-page__title title">Політика</h2>
+      <div class="politics-page__text text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
+        quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
+        quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
+        quia blanditiis facere eos delectus atque numquam, quis similique quae
+        iste! At?
+      </div>
+    </section>
+    <section class="page other-page">
+      <h2 class="other-page__title title">Інше</h2>
+      <div class="other-page__text text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        quaerat, recusandae maiores ab debitis maxime officiis, laudantium esse
+        quae corporis tempora ad? Nam nisi magnam accusamus nulla enim est
+        quibusdam, deserunt repellendus obcaecati vel officia, velit minima. Sint
+        quia blanditiis facere eos delectus atque numquam, quis similique quae
+        iste! At?
+      </div>
+    </section> -->
+  </div>
 </main>
