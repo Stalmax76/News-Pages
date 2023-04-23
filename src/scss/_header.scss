@@ -9,8 +9,8 @@
 .header__wrapper {
 }
 .wrapper-header {
-   padding: 49px 0px 32px;
-   min-height: 150px;
+   padding: 9px 0px 32px;
+   min-height: 170px;
    &__head {
       display: flex;
       justify-content: space-between;
@@ -24,7 +24,7 @@
 .head-header {
    &__title {
       font-family: $fontMainTitle;
-      font-size: 60px;
+      font-size: 4.2rem; /* 60/14 */
       line-height: 1.45; /* 87/60 */
       padding: 0 15px;
       z-index: 5;
@@ -193,11 +193,12 @@ body._touch .menu__list > li._active .menu__sub-list {
 body._touch .menu__list > li._active .menu__arrow {
    transform: rotate(-180deg);
 }
+
 @media (max-width: 1197.98px) {
    .wrapper-header {
-      padding: 15px 0px 20px;
+      padding: 25px 0px 20px;
       &__menu {
-         margin: 0 15px;
+         margin: 0 10px;
       }
    }
    .head-header {
@@ -222,7 +223,7 @@ body._touch .menu__list > li._active .menu__arrow {
       margin: 0 5px;
    }
    .head-header {
-      margin-bottom: 20px;
+      margin-bottom: 5px;
       &__title {
          justify-self: center;
          line-height: 0.5;
@@ -238,6 +239,10 @@ body._touch .menu__list > li._active .menu__arrow {
    .menu__list {
       justify-content: left;
    }
+   h1 {
+      margin-block-start: 0.4em;
+      margin-block-end: 0;
+   }
 }
 
 @media (max-width: 767.98px) {
@@ -246,11 +251,13 @@ body._touch .menu__list > li._active .menu__arrow {
    }
    .head-header__title {
       font-size: 45px;
+      margin-bottom: 20px;
    }
    .head-header__info {
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       justify-self: normal;
+      margin-bottom: 10px;
    }
 
    .head-header__subscribe-button {
@@ -259,11 +266,13 @@ body._touch .menu__list > li._active .menu__arrow {
    }
    .info-header__search {
       padding-right: 0px;
+      margin-right: 50px;
    }
 
    .info-header {
       &__burger {
          margin-bottom: 5px;
+         margin-right: 50px;
          z-index: 5;
          display: block;
          position: relative;
@@ -305,7 +314,7 @@ body._touch .menu__list > li._active .menu__arrow {
          }
          &::after {
             bottom: 50%;
-            transform: rotate(45deg) translate(0px, 50%);
+            transform: rotate(45deg) translate(0px, 50%) translateY(1px);
          }
       }
    }

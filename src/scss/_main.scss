@@ -1,12 +1,10 @@
 @import "pages/city_page.scss";
 
 .pages {
-   padding: 285px 0px 30px 0px;
+   padding-top: 285px;
+   padding-bottom: 30px;
 }
 
-.city-page {
-   //background-color: $backgroundGray;
-}
 .economics-page {
    background-color: $darkGray;
 }
@@ -32,17 +30,17 @@
    background-color: $backgroundGray;
 }
 
-.title {
-   font-size: 24px;
-   font-weight: 600;
-   margin-bottom: 10px;
-}
+// .title {
+//    font-size: 24px;
+//    font-weight: 600;
+//    margin-bottom: 10px;
+// }
 
-.text {
-   font-size: 18px;
-   font-weight: 400;
-   line-height: 1.5;
-}
+// .text {
+//    font-size: 18px;
+//    font-weight: 400;
+//    line-height: 1.5;
+// }
 .city-page__title {
 }
 .city-page__text {
@@ -87,3 +85,9 @@
 }
 .other-page__text {
 }
+
+// @media (min-width: 991.98px) {
+//    .pages {
+//       padding: 345px 0px 30px 0px;
+//    }
+// }

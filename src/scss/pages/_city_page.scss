@@ -1,80 +1,80 @@
-@import "_common.scss";
-
 .page {
 }
 .city-page {
-   margin-top: 5px;
+   overflow: hidden;
+   padding-bottom: 30px;
+   &__content {
+      position: relative;
+   }
 }
-.city-page__content {
-}
+
 .content-city-page {
    display: flex;
+   justify-content: space-between;
    gap: 20px;
 }
-.content-city__first-block {
-   flex: 0 1 35%;
-}
+
 .first-block-city {
+   flex: 0 1 33%;
+   &__items {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
 }
-.first-block-city__items {
-}
-.item-first-block-city {
-}
-.card-with-foto {
-}
-.card-with-foto__image {
-}
-.card-with-foto__content {
-}
-.content-card-with-foto {
-}
-.content-card-with-foto__title {
-}
-.card-title {
-}
-.content-card-with-foto__text {
-}
-.card-text {
-}
-.content-card-with-foto__date {
-}
-.card-date {
-}
-.content-city__second-block {
-   flex: 0 1 40%;
-}
+
 .second-block-city {
+   flex: 0 1 45%;
 }
-.card-with-big-foto {
-}
-.card-with-big-foto__image {
-}
-.card-with-big-foto__content {
-}
-.content-card-with-big-foto {
-}
-.content-card-with-big-foto__title {
-}
-.content-card-with-big-foto__text {
-}
-.card-with-big-foto__date {
-}
+
 .content-city__third-block {
    flex: 0 1 25%;
 }
-.third-block-city {
+
+@media (max-width: 1510px) {
+   .content-city-page {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+   .first-block-city {
+      flex: 0 1 40%;
+   }
+   .card-with-foto {
+      justify-content: flex-start;
+   }
+   .card-with-foto__content {
+      width: 100%;
+      height: 100%;
+   }
+   .second-block-city {
+      height: 100%;
+   }
+   .card-with-big-foto {
+      width: 100%;
+   }
+   .content-city__third-block {
+      flex: 0 1 100%;
+      padding: 3px 5px;
+   }
+   .third-block__body {
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+   }
+   .body-third-block__card {
+      width: 45%;
+   }
 }
-.third-block__body {
-}
-.body-third-block__card {
-}
-.card-news {
-}
-.card-news__data {
-}
-.card-data {
-}
-.card-news__text {
-}
-.card-text-noto-serife {
-}
+
+// @media (max-width: 1410px) {
+//    .content-city-page {
+//       justify-content: center;
+//    }
+//    .first-block-city {
+//       flex: 0 1 50%;
+//    }
+//    .second-block-city {
+//       flex: 0 1 45%;
+//    }
+// }
