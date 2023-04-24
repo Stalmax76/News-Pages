@@ -16,59 +16,52 @@ $titleFontFamily: "Noto Serif";
    align-items: flex-start;
    border-bottom: 1px solid rgba(224, 224, 224, 1);
    padding-top: 3px;
+   column-gap: 20px;
    padding-bottom: 18px;
    margin-bottom: 20px;
+   &:last-child {
+      margin-bottom: 2px;
+   }
+   &__image {
+      flex: 0 1 45%;
+      img {
+         width: 100%;
+      }
+   }
+   &__content {
+      flex: 0 1 55%;
+   }
 }
-.card-with-foto:last-child {
-   margin-bottom: 2px;
-}
-
-.card-with-foto__image {
-   margin-right: 20px;
-}
-.card-with-photo__image img {
-   height: 100%;
-}
-.card-with-foto__content {
-   width: 238px;
-   min-height: 180px;
+.content-card-with-foto {
    display: flex;
    flex-direction: column;
-}
-.content-card-with-foto__title {
-   flex: 0 1 auto;
-}
-
-.content-card-with-foto__text {
-   flex: 1 1 auto;
-   padding: 5px 2px 8px 2px;
-}
-
-.content-card-with-foto__date {
-   flex: 0 1 auto;
+   &__title {
+      margin-bottom: 8px;
+   }
+   &__text {
+      padding: 0px 2px 18px 2px;
+      align-self: auto;
+   }
 }
 
 //================= card-with-big-foto =========================
 .card-with-big-foto {
    display: flex;
    flex-direction: column;
-   justify-content: flex-start;
-   align-items: center;
-   // height: 680px;
+   // justify-content: flex-start;
 }
 .card-with-big-foto__image {
-   flex: 0 1 60%;
+   flex: 0 1 55%;
 }
 .card-with-big-foto__image img {
    width: 100%;
 }
 .card-with-big-foto__content {
    flex: 0 1 30%;
+   width: 100%;
+   text-align: left;
 }
 .content-card-with-big-foto {
-   display: flex;
-   flex-direction: column;
-   align-items: stretch;
 }
 .content-card-with-big-foto__title {
    margin-top: 16px;
@@ -77,51 +70,42 @@ $titleFontFamily: "Noto Serif";
 
 .content-card-with-big-foto__text {
    margin-top: 7px;
-   flex: 1 1 auto;
 }
 
 .card-with-big-foto__date {
-   flex: 0 1 auto;
    margin-top: 7px;
 }
 
 // ============= commman block=============================================
 .card-title {
    font-family: $fontCardTitle;
-   font-size: 14px; /* 18/14 */
+   font-size: 1.2rem; /* 18/14 */
    line-height: 1.38; /* 25/18 */
 }
 .card-text {
    line-height: 1.35;
-   &-noto-serife {
+   &__noto-serife {
       font-family: "Noto Serif";
-      font-size: 18px;
+      font-size: 1.3rem; /* 18/14 */
       line-height: 1.38;
    }
 }
 .card-date {
    color: rgba(115, 115, 115, 1);
-   font-size: 12px;
+   font-size: 0.85rem; /* 12/14 */
    line-height: 1.33;
 }
 // ========================== item-news-card ===========================================================
 .card-news {
    padding-bottom: 16px;
-}
-.card-news:last-child {
-   .card-news__text {
-      border-bottom: none;
-      padding-bottom: 0px;
+   &__date {
+      padding-bottom: 4px;
    }
-}
-.card-news__date {
-   padding-bottom: 4px;
-}
-
-.card-news__text {
-   text-align: left;
-   border-bottom: 1px solid rgba(224, 224, 224, 1);
-   padding-bottom: 16px;
+   &__text {
+      text-align: left;
+      border-bottom: 1px solid rgba(224, 224, 224, 1);
+      padding-bottom: 1.28rem; /* 128.571429%; /* 18/14 */
+   }
 }
 
 // ================================= button ================================

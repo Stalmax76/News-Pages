@@ -788,75 +788,40 @@ body._touch .menu__list > li._active .menu__arrow {
     font-size: 29px;
   }
 }
-.city-page {
-  overflow: hidden;
-  padding-bottom: 30px;
-}
-.city-page__content {
-  position: relative;
-}
-
-.content-city-page {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+.city-page__wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33% 43% 22%;
+  grid-template-rows: repeat(3 1fr);
+  column-gap: 20px;
 }
 
-.first-block-city {
-  flex: 0 1 33%;
-}
-.first-block-city__items {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.city-page__first-block {
+  grid-column: 1/2;
+  grid-row: 1/4;
 }
 
-.second-block-city {
-  flex: 0 1 45%;
+.city-page__second-block {
+  grid-column: 2/3;
+  grid-row: 1/4;
 }
 
-.content-city__third-block {
-  flex: 0 1 25%;
+.city-page__third-block {
+  grid-column: 3/4;
+  grid-row: 1/4;
 }
 
-@media (max-width: 1510px) {
-  .content-city-page {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .first-block-city {
-    flex: 0 1 40%;
-  }
-  .card-with-foto {
-    justify-content: flex-start;
-  }
-  .card-with-foto__content {
-    width: 100%;
-    height: 100%;
-  }
-  .second-block-city {
-    height: 100%;
-  }
-  .card-with-big-foto {
-    width: 100%;
-  }
-  .content-city__third-block {
-    flex: 0 1 100%;
-    padding: 3px 5px;
-  }
-  .third-block__body {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-  }
-  .body-third-block__card {
-    width: 45%;
-  }
+.third-block__wrapper {
+  padding-right: 15px;
 }
+
 .pages {
   padding-top: 285px;
   padding-bottom: 30px;
+}
+
+.city-page {
+  min-width: 100%;
 }
 
 .economics-page {
@@ -896,51 +861,42 @@ body._touch .menu__list > li._active .menu__arrow {
   align-items: flex-start;
   border-bottom: 1px solid rgb(224, 224, 224);
   padding-top: 3px;
+  column-gap: 20px;
   padding-bottom: 18px;
   margin-bottom: 20px;
 }
-
 .card-with-foto:last-child {
   margin-bottom: 2px;
 }
-
 .card-with-foto__image {
-  margin-right: 20px;
+  flex: 0 1 45%;
 }
-
-.card-with-photo__image img {
-  height: 100%;
+.card-with-foto__image img {
+  width: 100%;
 }
-
 .card-with-foto__content {
-  width: 238px;
-  min-height: 180px;
+  flex: 0 1 55%;
+}
+
+.content-card-with-foto {
   display: flex;
   flex-direction: column;
 }
-
 .content-card-with-foto__title {
-  flex: 0 1 auto;
+  margin-bottom: 8px;
 }
-
 .content-card-with-foto__text {
-  flex: 1 1 auto;
-  padding: 5px 2px 8px 2px;
-}
-
-.content-card-with-foto__date {
-  flex: 0 1 auto;
+  padding: 0px 2px 18px 2px;
+  align-self: auto;
 }
 
 .card-with-big-foto {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 .card-with-big-foto__image {
-  flex: 0 1 60%;
+  flex: 0 1 55%;
 }
 
 .card-with-big-foto__image img {
@@ -949,12 +905,8 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .card-with-big-foto__content {
   flex: 0 1 30%;
-}
-
-.content-card-with-big-foto {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  width: 100%;
+  text-align: left;
 }
 
 .content-card-with-big-foto__title {
@@ -964,52 +916,43 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .content-card-with-big-foto__text {
   margin-top: 7px;
-  flex: 1 1 auto;
 }
 
 .card-with-big-foto__date {
-  flex: 0 1 auto;
   margin-top: 7px;
 }
 
 .card-title {
   font-family: "Noto Serif";
-  font-size: 14px; /* 18/14 */
+  font-size: 1.2rem; /* 18/14 */
   line-height: 1.38; /* 25/18 */
 }
 
 .card-text {
   line-height: 1.35;
 }
-.card-text-noto-serife {
+.card-text__noto-serife {
   font-family: "Noto Serif";
-  font-size: 18px;
+  font-size: 1.3rem; /* 18/14 */
   line-height: 1.38;
 }
 
 .card-date {
   color: rgb(115, 115, 115);
-  font-size: 12px;
+  font-size: 0.85rem; /* 12/14 */
   line-height: 1.33;
 }
 
 .card-news {
   padding-bottom: 16px;
 }
-
-.card-news:last-child .card-news__text {
-  border-bottom: none;
-  padding-bottom: 0px;
-}
-
 .card-news__date {
   padding-bottom: 4px;
 }
-
 .card-news__text {
   text-align: left;
   border-bottom: 1px solid rgb(224, 224, 224);
-  padding-bottom: 16px;
+  padding-bottom: 1.28rem; /* 128.571429%; /* 18/14 */
 }
 
 .button {
