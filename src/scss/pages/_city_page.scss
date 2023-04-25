@@ -1,7 +1,7 @@
 .city-page__wrapper {
    width: 100%;
    display: grid;
-   grid-template-columns: 33% 43% 22%;
+   grid-template-columns: 33% 40% 22%;
    grid-template-rows: repeat(3 1fr);
    column-gap: 20px;
 }
@@ -10,6 +10,12 @@
    grid-row: 1/4;
 }
 .first-block {
+   display: grid;
+   grid-template-columns: 1 1fr;
+   grid-template-rows: repeat(3, 225px);
+   &:last-child {
+      margin-bottom: 2px;
+   }
 }
 .first-block__item {
 }
@@ -22,52 +28,39 @@
 }
 
 .city-page__third-block {
-   grid-column: 3/4;
    grid-row: 1/4;
+   padding: 0 5px;
 }
 .third-block {
 }
 .third-block__wrapper {
-   padding-right: 15px;
+   display: grid;
+   grid-template-columns: 1 auto;
+   grid-template-rows: repeat(5, auto);
 }
 .third-block__item {
 }
 
-// @media (max-width: 1510px) {
-//    .content-city-page {
-//       flex-wrap: wrap;
-//       justify-content: center;
-//    }
-//    .first-block-city {
-//       flex: 0 1 40%;
-//    }
-//    .card-with-foto {
-//       justify-content: flex-start;
-//    }
-//    .card-with-foto__content {
-//       width: 100%;
-//       height: 100%;
-//    }
-//    .second-block-city {
-//       height: 100%;
-//    }
-//    .card-with-big-foto {
-//       width: 100%;
-//    }
-//    .content-city__third-block {
-//       flex: 0 1 100%;
-//       padding: 3px 5px;
-//    }
-//    .third-block__body {
-//       margin: 0 auto;
-//       display: flex;
-//       flex-wrap: wrap;
-//       gap: 25px;
-//    }
-//    .body-third-block__card {
-//       width: 45%;
-//    }
-// }
+@media (max-width: 1399.98px) {
+   .city-page__wrapper {
+      justify-content: center;
+      // grid-template-columns: repeat(4 auto);
+      // grid-template-rows: repeat(5 auto);
+      // grid-auto-rows: auto auto;
+   }
+   .city-page__first-block {
+      // grid-column: 1/3;
+      // grid-row: 1/4;
+   }
+   .city-page__second-block {
+      // grid-column: 3/5;
+      // grid-row: 1/4;
+   }
+   .city-page__third-block {
+      // grid-column: 1/3;
+      // grid-row: 4/6;
+   }
+}
 
 // @media (max-width: 1410px) {
 //    .content-city-page {
